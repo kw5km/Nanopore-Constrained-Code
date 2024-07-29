@@ -13,5 +13,9 @@ This code was run on `Ubuntu 22.04.4` with `conda 4.12.0`
  ```
 * deBruijn: utils and functions related to building a de Bruijn graph and applying it to encoding problems.
 * StateSplittng: implementation of State Splitting algorithm to enforce a minimum out degree on a given graph
-* Viterbi:
+* Viterbi: threaded viterbi for handling multiple sequences at once
 * Image: code for decoding sequence reads back into binary data
+
+<>## Data
+
+<>## How to Run
