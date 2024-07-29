@@ -22,14 +22,14 @@ This code was run on `Ubuntu 22.04.4` with `conda 4.12.0`
 ```
 python State_Splitting/apply_splitting.py -d $\delta$ -max_run 2 -b 186 -k 6 -f_o <file_path> -f_m <file_path> + messages/ -f_s <file_path_score> + 6mer_means.txt -m <file_path_img>+Fall_2020_Grounds_scaled_gray.npy
 ```
-*`-d`: $\delta$ constraint value
-*`-max_run`: maximum number of consecutive homopolymers 
-*`-b`: sequence length
-*`-k`: $k$-mer size
-*`-f_o`: file path out
-*`-f_m`: file path out for binary messages
-*`-f_s`: file path ONT $k$-mer [means file](https://github.com/nanoporetech/kmer_models) 
-*`-m`: file path in for message to be encoded
+* `-d`: $\delta$ constraint value
+* `-max_run`: maximum number of consecutive homopolymers 
+* `-b`: sequence length
+* `-k`: $k$-mer size
+* `-f_o`: file path out
+* `-f_m`: file path out for binary messages
+* `-f_s`: file path ONT $k$-mer [means file](https://github.com/nanoporetech/kmer_models) 
+* `-m`: file path in for message to be encoded
 In our pipeline, these encoded bases are then used to simulate nanopore sequencing current values with [DeepSimulator](https://github.com/liyu95/DeepSimulator).
 
 ### Basecalling with Viterbi
