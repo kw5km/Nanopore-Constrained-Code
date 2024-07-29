@@ -48,7 +48,7 @@ python Viterbi/multi_viterbi.py -maxrun $max_run -procc diff -k 6 -dwell 8 -d <d
 * `-f_s`: file path ONT $k$-mer [means file](https://github.com/nanoporetech/kmer_models) 
 
 ### Decoding Basecalls
-Basecalled sequences produced using our Viterbi implementation can be decoded back to binary using the following pipeline.
+Basecalled sequences produced using our Viterbi implementation can be decoded back to binary using the following pipeline, found in `Image/`.
 
 ```
 python Image/vit2bits.py -delta <delta> -f_o <file_path_out> -f_p <file_path_padding> -f_c <file_path_check>
