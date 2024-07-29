@@ -61,4 +61,4 @@ python Image/bits2img.py -f_o <file_path_out> -f_c <file_path_check>
 * `-f_p`: file path location of saved padding info
 * `-f_c`: file path for teh orignal message outouts to check against decoded outputs
 * 
-  After decoding, RS decoding can be applied to further correct any residual errors or missing sequences using 'RS_singleCodeword_decode.m`. Results can be viewed using `paper_PLOT.m`.
+  After decoding, RS decoding can be applied to further correct any residual errors or missing sequences using `RS_singleCodeword_decode.m`. Results can be viewed using `paper_PLOT.m`.
