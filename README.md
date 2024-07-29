@@ -16,6 +16,3 @@ This code was run on `Ubuntu 22.04.4` with `conda 4.12.0`
 * Viterbi: threaded viterbi for handling multiple sequences at once
 * Image: code for decoding sequence reads back into binary data
 
-<>## Data
-
-<>## How to Run
