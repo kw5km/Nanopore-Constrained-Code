@@ -30,6 +30,8 @@ python State_Splitting/apply_splitting.py -d delta -max_run 2 -b 186 -k 6 -f_o <
 * `-f_m`: file path out for binary messages
 * `-f_s`: file path ONT $k$-mer [means file](https://github.com/nanoporetech/kmer_models) 
 * `-m`: file path in for message to be encoded
+
+To produce Reed Solomon redundancy bits, use `RS_singleCodeword.m`
 In our pipeline, these encoded bases are then used to simulate nanopore sequencing current values with [DeepSimulator](https://github.com/liyu95/DeepSimulator).
 
 ### Basecalling with Viterbi
@@ -58,3 +60,5 @@ python Image/bits2img.py -f_o <file_path_out> -f_c <file_path_check>
 * `-f_o`: file path out
 * `-f_p`: file path location of saved padding info
 * `-f_c`: file path for teh orignal message outouts to check against decoded outputs
+* 
+  After decoding, RS decoding can be applied to further correct any residual errors or missing sequences using 'RS_singleCodeword_decode.m`. Results can be viewed using `paper_PLOT.m`.
