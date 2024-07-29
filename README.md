@@ -1,4 +1,4 @@
-#Constrained Coding for Error Mitigation in Nanopore-Based DNA Data Storage
+# Constrained Coding for Error Mitigation in Nanopore-Based DNA Data Storage
 
 This repository includes code and data for the implementation of a de Bruijn based constrained code tailord to error correction for nanopore seqeuncing. This error correcting code is intended for use in a DNA data storage pipeline when nanopore sequencing is also used.
 
