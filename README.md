@@ -35,8 +35,15 @@ In our pipeline, these encoded bases are then used to simulate nanopore sequenci
 ### Basecalling with Viterbi
 Signal measurement files can then be basecalle dusing our Viterbi Algorithm implementation, `Viterbi/multi_viterbi.py`
 ```
-python Viterbi/multi_viterbi.py -maxrun $max_run -procc 'diff' -k 6 -dwell 8 -d $SLURM_ARRAY_TASK_ID -r ${rateArray[$SLURM_ARRAY_TASK_ID]} -f_i $path_var -f_o $path_var_out -f_b $file_out -f_s $score_file
+python Viterbi/multi_viterbi.py -maxrun $max_run -procc 'diff' -k 6 -dwell 8 -d $\delta$ -r <rate> -f_i <file_path_in> -f_o <file_path_out> -f_b <file_path_out_basecalls> -f_s <file_path_score> + 6mer_means.txt
 ```
+* `-maxrun`: maximum number of consecutive homopolymers
+* `-procc`: ISI mitigation preprocessing step. `diff` is used exclusively in this work.
+* `-k`: $k$-mer size
+* `-d`: $\delta$ constraint value
+* `-f_o`: file path prefix out
+* `-f_b`: file path out for basecalls
+* `-f_s`: file path ONT $k$-mer [means file](https://github.com/nanoporetech/kmer_models) 
 
 ### Decoding Basecalls
 
